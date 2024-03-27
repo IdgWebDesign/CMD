@@ -1,0 +1,282 @@
+@font-face {
+    font-family: "FlamaCondensedMedium";
+    src: url(../font/FlamaCondensed-Medium.otf);
+}
+@font-face {
+    font-family: "FlamaCondensedBasic";
+    src: url(../font/FlamaCondensed-Light.otf);
+}
+
+@font-face {
+    font-family: "FlamaCondensedBook";
+    src: url(../font/FlamaCondensed-Book.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-decoration: none;
+}
+
+section{
+    
+    background-color: black;
+    position: relative;
+}
+
+
+#inicio{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/bg_main.png);
+    background-position: center 90%;
+    
+}
+
+#camion{
+    position: absolute;
+    top: 54%;
+    right: 49%;
+    transform: translate(50%, -50%);
+}
+
+#lineaAmarilla{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit:fill;
+}
+
+#lineaGris{
+    position: absolute;
+    right: 8%;
+    top: 0;
+    height: 40em;
+    width: auto;
+    object-fit: contain;
+}
+
+.visibleMenu{
+    position: absolute;
+    left: 18%;
+    height: 62em;
+    
+    top: -20%;
+    width: 20em;
+    background-image: url(../img/bg_protomenu.png);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.textVisibleMenuZone{
+    width: 70%;
+    margin: 0 auto;
+    
+}
+
+.textVisibleMenuZone img{
+    margin: 2em 0%;
+}
+
+.textVisibleMenuZone h2{
+    font-family: "FlamaCondensedMedium";
+    color: #c9b217;
+    font-size: 1.8em;
+}
+
+.textVisibleMenuZone p{
+    font-family: "FlamaCondensedBasic";
+    color: #c9b217;
+    line-height: 100%;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+.textVisibleMenuZone img{
+    width: 13em;
+    object-fit: contain;
+}
+
+.buttonMenu{
+    position: fixed;
+    top: 4%;
+    right: 4%;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.555);
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 990;
+}
+
+.buttonMenu:hover{
+    background-color: black;;
+}
+
+.buttonMenu p{
+    font-family: "FlamaCondensedBasic";
+    font-size: 1.8em;
+    color: white;
+    margin-right: 0.5em;
+}
+
+.buttonMenu img{
+    width: 1.8em;
+    object-fit: contain;
+}
+
+.MenuDesplegado{
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.801);
+    box-sizing: border-box;
+    padding: 6rem 4rem 6rem 4rem;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+    z-index: 999;
+}
+
+.active{
+    transform: translate(0%);
+    visibility: visible;
+}
+
+.containerDesplegado{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: end;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.optionsDesplegado{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: end;
+    flex:1;
+
+}
+
+.optionsDesplegado a{
+    font-family: "FlamaCondensedBook";
+    font-size: 2em;
+    color: #898887;
+    transition: 0.3s;
+}
+
+.optionsDesplegado a:hover{
+    color: white;
+}
+
+.redesDesplegado{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 1.2em;
+}
+
+.redesDesplegado a img{
+    width: 2em;
+    height: 2em;
+    object-fit: contain;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.redesDesplegado a img:hover{
+    opacity: 1;
+}
+
+.redesDesplegado a{
+    margin: 0% 1%;
+}
+
+.idiomasDesplegado{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.idiomasDesplegado a img{
+    
+    height: 2em;
+    object-fit: contain;
+}
+
+.idiomasDesplegado a{
+    margin: 0% 2%;
+}
+
+#closeDesplegado{
+    width: 4em;
+    height: 4em;
+    object-fit: contain;
+    margin-bottom: 2em;
+    opacity: 0.5;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#closeDesplegado:hover{
+    opacity: 1;
+}
+
+#empresa{
+    display: flex;
+    width: 100vw;
+    height: 900px;
+}
+
+.imgEmpresaCont{
+    width: 45%;
+    height: 100%;
+
+}
+
+
+.imgEmpresaCont img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.textEmpresaCont{
+    width: 55%;
+    height: 100%;
+    background-image: url(../img/bgtext_empresa.png);
+    background-size: 100% 100%;
+    padding: 8%;
+    box-sizing: border-box;
+}
+
+.textEmpresaCont h2{
+    font-family: "FlamaCondensedBasic";
+    font-size: 4em;
+    color: #ffdd00;
+}
+
+.textEmpresaCont p span{
+    font-family: "FlamaCondensedMedium";
+    font-size: 1.2em;
+    color: #ffdd00;
+}
+
+.textEmpresaCont p{
+    font-family: "FlamaCondensedBasic";
+    font-size: 1.5em;
+    color: white;
+    margin: 4% 0%;
+}
